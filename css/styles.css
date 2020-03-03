@@ -1,0 +1,109 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  
+}
+.header nav {
+  padding: 0.5em 0;
+  max-width: 100%;
+  margin: 0 auto;
+  /* Tipo de diseño flex */
+  /* https://developer.mozilla.org/es/docs/Web/CSS/flex */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #242323;
+}
+@media (min-width: 768px) {
+  .header nav {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+.header nav a {
+  color: #747374;
+  text-decoration: none;
+  font-size: 2em;
+}
+.hero {
+  background-image: url(../images/bosque.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 600px;
+}
+.hero-content {
+  /* width: 100%;
+  height: 600px;
+  background-color: green;
+  position: relative;
+  display: flex; */
+  /* background-color: white; */
+  width: 960px;
+  height: 1000px;
+  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7em;
+}
+.polaroid{
+  height: auto;
+  position: relative;
+  width: 50%;
+  padding: 2%;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+.image{
+  width: 100%;
+}
+/* Codigo para que salga un cuadrito en la imagen */
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
