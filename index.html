@@ -1,45 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Laudato-si</title>
-    <!--Hoja de estilo normalize-->
-    <link rel="stylesheet" href="css/normalize.css" />
-    <!--Hoja de estilo personalizada-->
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- Google fonts -->
-    <!--Fuente Merriweather-->
-    <link
-      href="https://fonts.googleapis.com/css?family=Merriweather&display=swap"
-      rel="stylesheet"
-    />
-    <!--Fuente spartan-->
-    <link href="https://fonts.googleapis.com/css?family=Spartan:500&display=swap" rel="stylesheet">
-    <!--Fuente EB Garamond-->
-    <link href="https://fonts.googleapis.com/css?family=EB+Garamond:600i&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div class="borde">
-    </div>
-   
-    <div class="header">
-      <div class="header-content">
-        <h1>Laudato si'</h1>
-        <nav>
-          <a href="#">Inicio</a>
-          <a href="#">El Laudato Si'</a>
-          <a href="#">Interpretaciones</a>
-          <a href="#">Todo</a>
-        </nav>
-      </div>
-    </div>
-    <div class="ElLaudato">
-      <div class="ElLaudato-content">
-        <h1>El Laudato Si'</h1> 
-        <a href="#" class="button">Leer</a>
-      </div>
-    
-<!--Comentario para probar el merge-->
-  </body>
-</html>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Laudato-si</title>
+        <!--Hoja de estilo normalize-->
+        <link rel="stylesheet" href="css/normalize.css" />
+        <!--Hoja de estilo personalizada-->
+        <link rel="stylesheet" href="css/style.css" />
+        <!-- Google fonts -->
+        <!--Fuente Merriweather-->
+        <link
+          href="https://fonts.googleapis.com/css?family=Merriweather&display=swap"
+          rel="stylesheet"
+        />
+        <!--Fuente spartan-->
+        <link href="https://fonts.googleapis.com/css?family=Spartan:500&display=swap" rel="stylesheet">
+        <!--Fuente EB Garamond-->
+        <link href="https://fonts.googleapis.com/css?family=EB+Garamond:600i&display=swap" rel="stylesheet">
+      </head>
+      <body>
+        <div class="borde">
+        </div>
+       
+        <div class="header">
+          <div class="header-content">
+            <h1>Laudato si'</h1>
+            <nav>
+              <a href="#">Inicio</a>
+              <a href="#">El Laudato Si'</a>
+              <a href="#">Interpretaciones</a>
+              <a href="#">Todo</a>
+            </nav>
+          </div>
+        </div>
+        <div class="ElLaudato">
+          <div class="ElLaudato-content">
+            <h1>El Laudato Si'</h1> 
+            <a href="#" class="button">Leer</a>
+          </div>
+        </div>
+          <article id="slider">
+            <input checked type="radio" name="slider" id="slide1" />
+            <input type="radio" name="slider" id="slide2" />
+            <input type="radio" name="slider" id="slide3" />
+            <input type="radio" name="slider" id="slide4" />
+            <input type="radio" name="slider" id="slide5" />
+            <div id="slides">
+              <div id="container">
+                <div class="inner">
+                  <article>
+                    <img
+                      src="https://www.grimdarkmagazine.com/wp-content/uploads/2017/03/Blog-cover-image.jpg"
+                    />
+                  </article>
+                  <article>
+                    <div class="caption">
+                      <h3>A Bubble on Flower</h3>
+                    </div>
+                    <img
+                      src="https://66.media.tumblr.com/a2135bb5d3d7633cce5beabad13ce2b6/tumblr_po49plkdlp1tvfheeo1_1280.jpg"
+                    />
+                  </article>
+                  <article>
+                    <div class="caption">
+                      <h3>A Small Elephant <a href="#">read more</a></h3>
+                    </div>
+                    <img
+                      src="https://66.media.tumblr.com/e6d2fb39c44e920e4be10a5c4c6eaec2/tumblr_oynfkcOYey1tvfheeo1_1280.jpg"
+                    />
+                  </article>
+                  <article>
+                    <div class="caption">
+                      <h3>A Yellow Flower <a href="#">read more</a></h3>
+                    </div>
+                    <img
+                      src="https://66.media.tumblr.com/9e08d726118b91b1e106a45cb16be2ff/tumblr_oynfexSJDL1tvfheeo1_1280.jpg"
+                    />
+                  </article>
+                  <article>
+                    <div class="caption">
+                      <h3>A Pink Flower</h3>
+                    </div>
+                    <img
+                      src="https://66.media.tumblr.com/6e4c10756e2711a98e747b2ef36e9533/tumblr_oo8g6bohQl1tvfheeo1_1280.jpg"
+                    />
+                  </article>
+                </div>
+              </div>
+            </div>
+            <div id="commands">
+              <label for="slide1"></label>
+              <label for="slide2"></label>
+              <label for="slide3"></label>
+              <label for="slide4"></label>
+              <label for="slide5"></label>
+            </div>
+            <div id="active">
+              <label for="slide1"></label>
+              <label for="slide2"></label>
+              <label for="slide3"></label>
+              <label for="slide4"></label>
+              <label for="slide5"></label>
+            </div>
+          </article>
+        </body>
+      </html>
+      

@@ -1,186 +1,462 @@
 :root {
-    --white: #ffffff;
-    --light-green: #1b5e20;
-    --dark-green: #003300;
+  --white: #ffffff;
+  --light-green: #1b5e20;
+  --dark-green: #003300;
 }
 html {
-    box-sizing: border-box;
-    min-height: 100%;
-  }
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
+  box-sizing: border-box;
+  min-height: 100%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 .borde{
-    background-color: var(--light-green);
-    height: 2em;
+  background-color: var(--light-green);
+  height: 2em;
 }
 
 .header {
-    height: 40em;
-    background-image: url(../img/fondo.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    padding: 1em;
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-    
-  } 
-  .header-content {
-    font-size: 2em;
-    position: relative;
-    z-index: 1;
-    flex: 1;
-    color: var(--white);
-    text-align: start;
-    font-family: 'EB Garamond' ;
-  }
-  .header-content a {
-    font-size: 1em;
-    color: var(--primary);
-    text-decoration: none;
-    font-family: 'spartan';
-  }
+  height: 40em;
+  background-image: url(../img/fondo.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding: 1em;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  
+} 
+.header-content {
+  font-size: 2em;
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  color: var(--white);
+  text-align: start;
+  font-family: 'EB Garamond' ;
+}
+.header-content a {
+  font-size: 1em;
+  color: var(--primary);
+  text-decoration: none;
+  font-family: 'spartan';
+}
+.header-content nav{
+  position: relative;
+  max-width: 900px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+
+@media (max-width: 1000px) {
   .header-content nav{
-    position: relative;
-    max-width: 900px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    
+  background-color: rgba(0, 66, 128, 0.719);
   }
+}
+
+@media (max-width: 800px) {
+  .header-content a{
+  font-size: 0.7em;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-content a{
+  font-size: 0.6em;
+  }
+}
+@media (max-width: 1100px) {
+  .header{
+      height: 35em;
+  }
+}
+
+@media (max-width: 1000px) {
+  .header{
+      height: 30em;
+  }
+}
+@media (max-width: 950px) {
+  .header{
+      height: 27.5em;
+  }
+} 
+@media (max-width: 900px) {
+  .header{
+      height: 25em;
+  }
+}
+@media (max-width: 850px) {
+  .header{
+      height: 22.5em;
+  }
+}
+@media (max-width: 800px) {
+  .header{
+      height: 20em;
+  }
+}
+@media (max-width: 700px) {
+  .header{
+      height: 15em;
+  }
+}
+
+@media (max-width: 600px) {
+  .header{
+      height: 13em;
+  }
+}
+
+.ElLaudato {
+  height: 30em;
+  background-image: url(../img/Laudato.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-bottom: 2em;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ElLaudato-content {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  padding-bottom: 2em;
+  color: var(--light-green);
+  text-align: center;
+}
+
+.button {
+  background-color: var(--dark-green);
+  padding: 1em 3em;
+  border-radius: 0.3em;
+  font-size: 1.2em;
+  font-weight: 700;
+  display: inline-block;
+  color: var(--white);
+  text-decoration: none;
+  text-transform: uppercase;
   
-  @media (max-width: 1000px) {
-    .header-content nav{
-    background-color: rgba(0, 66, 128, 0.719);
-    }
-  }
+  border: none;
+}
 
-  @media (max-width: 800px) {
-    .header-content a{
-    font-size: 0.7em;
-    }
+@media (max-width: 1000px) {
+  .ElLaudato{
+      height: 19em;
   }
+}
+@media (max-width: 900px) {
+  .ElLaudato{
+      height: 18em;
+  }
+}
+@media (max-width: 800px) {
+  .ElLaudato{
+      height: 17em;
+  }
+}
 
-  @media (max-width: 600px) {
-    .header-content a{
-    font-size: 0.6em;
-    }
+@media (max-width: 700px) {
+  .ElLaudato{
+      height: 15em;
   }
-  @media (max-width: 1100px) {
-    .header{
-        height: 35em;
-    }
-  }
-  
-  @media (max-width: 1000px) {
-    .header{
-        height: 30em;
-    }
-  }
-  @media (max-width: 950px) {
-    .header{
-        height: 27.5em;
-    }
-  } 
-  @media (max-width: 900px) {
-    .header{
-        height: 25em;
-    }
-  }
-  @media (max-width: 850px) {
-    .header{
-        height: 22.5em;
-    }
-  }
-  @media (max-width: 800px) {
-    .header{
-        height: 20em;
-    }
-  }
-  @media (max-width: 700px) {
-    .header{
-        height: 15em;
-    }
-  }
+}
 
-  @media (max-width: 600px) {
-    .header{
-        height: 13em;
-    }
+@media (max-width: 600px) {
+  .ElLaudato{
+      height: 13em;
   }
+}
 
-  .ElLaudato {
-    height: 30em;
-    background-image: url(../img/Laudato.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    margin-bottom: 2em;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@media (max-width: 600px) {
+  .ElLaudato-content .button{
+      padding: 0.5em 2em;
+      border-radius: 0.3em;
+      font-size: 1em;
+      font-weight: 700;
   }
- 
-  .ElLaudato-content {
-    position: relative;
-    z-index: 1;
-    flex: 1;
-    padding-bottom: 2em;
-    color: var(--light-green);
-    text-align: center;
-  }
+}
 
-  .button {
-    background-color: var(--dark-green);
-    padding: 1em 3em;
-    border-radius: 0.3em;
-    font-size: 1.2em;
-    font-weight: 700;
-    display: inline-block;
-    color: var(--white);
-    text-decoration: none;
-    text-transform: uppercase;
-    
-    border: none;
-  }
-
-  @media (max-width: 1000px) {
-    .ElLaudato{
-        height: 19em;
-    }
-  }
-  @media (max-width: 900px) {
-    .ElLaudato{
-        height: 18em;
-    }
-  }
-  @media (max-width: 800px) {
-    .ElLaudato{
-        height: 17em;
-    }
-  }
-
-  @media (max-width: 700px) {
-    .ElLaudato{
-        height: 15em;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .ElLaudato{
-        height: 13em;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .ElLaudato-content .button{
-        padding: 0.5em 2em;
-        border-radius: 0.3em;
-        font-size: 1em;
-        font-weight: 700;
-    }
-  }
+#slider {
+text-align: center;
+}
+h2 {
+margin: 40px 0 25px;
+border-bottom: 1px solid #bbb;
+padding: 0 0 10px;
+}
+p {
+margin: 20px 0 16px;
+}
+strong {
+font-weight: bold;
+}
+label,
+a {
+color: brown;
+cursor: pointer;
+text-decoration: none;
+font-style: italic;
+}
+label:hover,
+a:hover {
+color: #ddd !important;
+}
+* {
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+label,
+#active,
+img {
+-moz-user-select: none;
+-webkit-user-select: none;
+}
+.catch {
+display: block;
+height: 0;
+overflow: hidden;
+}
+#slider {
+margin: 0 auto;
+}
+input {
+display: none;
+}
+#slide1:checked ~ #slides .inner {
+margin-left: 0;
+}
+#slide2:checked ~ #slides .inner {
+margin-left: -100%;
+}
+#slide3:checked ~ #slides .inner {
+margin-left: -200%;
+}
+#slide4:checked ~ #slides .inner {
+margin-left: -300%;
+}
+#slide5:checked ~ #slides .inner {
+margin-left: -400%;
+}
+#container {
+width: 100%;
+overflow: hidden;
+}
+article img {
+width: 100%;
+}
+#slides .inner {
+width: 500%;
+line-height: 0;
+}
+#slides article {
+width: 20%;
+float: left;
+}
+#commands {
+margin: -25% 0 0 0;
+width: 100%;
+height: 50px;
+}
+#commands label {
+display: none;
+width: 80px;
+height: 80px;
+opacity: 0.5;
+}
+#commands label:hover {
+opacity: 0.8;
+}
+#active {
+position: relative;
+z-index: 5;
+margin: 16% 0 0;
+text-align: center;
+}
+#active label {
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+display: inline-block;
+width: 10px;
+height: 10px;
+background: #bbb;
+}
+#active label:hover {
+background: #333;
+border-color: #777 !important;
+}
+#slide1:checked ~ #commands label:nth-child(2),
+#slide2:checked ~ #commands label:nth-child(3),
+#slide3:checked ~ #commands label:nth-child(4),
+#slide4:checked ~ #commands label:nth-child(5),
+#slide5:checked ~ #commands label:nth-child(1) {
+background: url("https://0.s3.envato.com/files/84450220/img/next.png")
+no-repeat;
+float: right;
+margin: 0 12px 0 0;
+display: block;
+}
+#slide1:checked ~ #commands label:nth-child(5),
+#slide2:checked ~ #commands label:nth-child(1),
+#slide3:checked ~ #commands label:nth-child(2),
+#slide4:checked ~ #commands label:nth-child(3),
+#slide5:checked ~ #commands label:nth-child(4) {
+background: url("https://0.s3.envato.com/files/84450220/img/previous.png")
+no-repeat;
+float: left;
+margin: 0 0 0 -6px;
+display: block;
+}
+#slide1:checked ~ #active label:nth-child(1),
+#slide2:checked ~ #active label:nth-child(2),
+#slide3:checked ~ #active label:nth-child(3),
+#slide4:checked ~ #active label:nth-child(4),
+#slide5:checked ~ #active label:nth-child(5) {
+background: #000;
+opacity: 0.6;
+border-color: #fff !important;
+border: 2px solid #fff;
+}
+.caption {
+line-height: 20px;
+margin: 0 0 -150%;
+position: absolute;
+padding: 320px 12px;
+opacity: 0;
+color: #fff;
+text-transform: none;
+font-family: "Open Sans", Arial, Helvetica, sans-serif;
+text-align: left;
+font-size: 18px;
+}
+.caption h3 {
+display: inline-block;
+padding: 10px;
+background: #000;
+border-radius: 3px 3px 3px 3px;
+-moz-border-radius: 3px 3px 3px 3px;
+-webkit-border-radius: 3px 3px 3px 3px;
+opacity: 0.7;
+filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+}
+#slides {
+position: relative;
+padding: 2px;
+-webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+#slides .inner {
+-webkit-transform: translateZ(0);
+-webkit-transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+-moz-transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+-ms-transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+-o-transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+-webkit-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+-moz-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+-ms-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+-o-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+}
+#slider {
+-webkit-transform: translateZ(0);
+-webkit-transition: all 0.5s ease-out;
+-moz-transition: all 0.5s ease-out;
+-o-transition: all 0.5s ease-out;
+transition: all 0.5s ease-out;
+}
+#commands label {
+-webkit-transform: translateZ(0);
+-webkit-transition: opacity 0.2s ease-out;
+-moz-transition: opacity 0.2s ease-out;
+-o-transition: opacity 0.2s ease-out;
+transition: opacity 0.2s ease-out;
+}
+#slide1:checked ~ #slides article:nth-child(1) .caption,
+#slide2:checked ~ #slides article:nth-child(2) .caption,
+#slide3:checked ~ #slides article:nth-child(3) .caption,
+#slide4:checked ~ #slides article:nth-child(4) .caption,
+#slide5:checked ~ #slides article:nth-child(5) .caption {
+opacity: 1;
+-webkit-transition: all 1s ease-out 0.6s;
+-moz-transition: all 1s ease-out 0.6s;
+-o-transition: all 1s ease-out 0.6s;
+transition: all 1s ease-out 0.6s;
+}
+#commands,
+#commands label,
+#slides,
+#active,
+#active label {
+-webkit-transform: translateZ(0);
+-webkit-transition: all 0.5s ease-out;
+-moz-transition: all 0.5s ease-out;
+-o-transition: all 0.5s ease-out;
+transition: all 0.5s ease-out;
+}
+#slider {
+max-width: 100%px;
+}
+@media only screen and (max-width: 100%) {
+#slider #commands {
+margin: -25% 0 0 5%;
+width: 90%;
+height: 50px;
+}
+#slider #commands label {
+-moz-transform: scale(0.9);
+-webkit-transform: scale(0.9);
+-o-transform: scale(0.9);
+-ms-transform: scale(0.9);
+transform: scale(0.9);
+}
+#slider #slides .caption {
+padding: 2em;
+}
+#slider #slides {
+padding: 2px 0;
+-webkit-border-radius: 0;
+-moz-border-radius: 0;
+border-radius: 0;
+}
+#slider #active {
+margin: 15% 0 0;
+}
+}
+@media only screen and (max-width: 450px) {
+#slider #commands {
+margin: -28% 0 0 1%;
+width: 100%;
+height: 70px;
+}
+#slider #active {
+margin: 12% 0 0;
+}
+#slider #slides {
+padding: 2px 0;
+-webkit-border-radius: 0;
+-moz-border-radius: 0;
+border-radius: 0;
+}
+#slider #slides .caption {
+opacity: 0 !important;
+}
+#slider #commands label {
+-moz-transform: scale(0.7);
+-webkit-transform: scale(0.7);
+-o-transform: scale(0.7);
+-ms-transform: scale(0.7);
+transform: scale(0.7);
+}
+}
