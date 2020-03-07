@@ -26,7 +26,6 @@ html {
   .header nav a:hover {
     background-color: #fcf8e8;
     color: black;
-    /* background-color: #3e8e41; */
   }
 }
 .header nav a {
@@ -48,6 +47,7 @@ html {
 @media (min-width: 768px) {
   .header {
     position: fixed;
+    z-index: 1;
   }
   .progress-container {
     width: 100%;
@@ -110,7 +110,6 @@ h3 {
   color: #111;
 }
 
-/* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
   .bgimg-1,
   .bgimg-2,
@@ -118,7 +117,6 @@ h3 {
     background-attachment: scroll;
   }
 }
-/* CardProfile */
 .card {
     margin-top: 8em;
   margin: 0 auto;
@@ -142,7 +140,7 @@ img {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 2px 16px;
 }
-/* Solid border */
+
 hr.solid {
     border-top: 3px solid black;
   }

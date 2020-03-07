@@ -21,7 +21,6 @@ html {
 
 .header nav {
   border: none;
-  /* padding: 15px 32px; */
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -36,7 +35,6 @@ html {
 }
 .header nav a {
   padding: 15px 32px;
-  /* background-color: aqua; */
   color: white;
   text-decoration: none;
   font-size: 1.5em;
@@ -62,7 +60,6 @@ html {
   background-image: url(../img/fondo.png);
   background-size: 100%;
   background-repeat: no-repeat;
-  /* background-attachment: fixed; */
   padding: 1em;
   position: relative;
   display: flex;
@@ -147,21 +144,12 @@ html {
 }
 #wide {
   flex: 1;
-  /* Grow to rest of container */
-}
-
-/*
-PURE RESPONSIVE CSS3 SLIDESHOW GALLERY by Roko C. buljan
-http://stackoverflow.com/a/34696029/383904
-*/
-
+ }
 .CSSgal {
   position: relative;
   overflow: hidden;
-  height: 100%; /* Or set a fixed height */
+  height: 100%;
 }
-
-/* SLIDER */
 
 .CSSgal .slider {
   height: 100%;
@@ -169,8 +157,6 @@ http://stackoverflow.com/a/34696029/383904
   font-size: 0;
   transition: 0.8s;
 }
-
-/* SLIDES */
 
 .CSSgal .slider > * {
   font-size: 1rem;
@@ -182,9 +168,6 @@ http://stackoverflow.com/a/34696029/383904
   background: none 50% no-repeat;
   background-size: cover;
 }
-
-/* PREV/NEXT, CONTAINERS & ANCHORS */
-
 .CSSgal .prevNext {
   position: absolute;
   z-index: 2;
@@ -192,9 +175,8 @@ http://stackoverflow.com/a/34696029/383904
   width: 100%;
   height: 0;
 }
-
 .CSSgal .prevNext > div + div {
-  visibility: hidden; /* Hide all but first P/N container */
+  visibility: hidden;
 }
 
 .CSSgal .prevNext a {
@@ -202,7 +184,7 @@ http://stackoverflow.com/a/34696029/383904
   position: absolute;
   width: 60px;
   height: 60px;
-  line-height: 60px; /* If you want to place numbers */
+  line-height: 60px;
   text-align: center;
   opacity: 0.7;
   -webkit-transition: 0.3s;
@@ -218,8 +200,6 @@ http://stackoverflow.com/a/34696029/383904
   left: auto;
   right: 0;
 }
-
-/* NAVIGATION */
 
 .CSSgal .bullets {
   position: absolute;
