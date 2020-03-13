@@ -13,104 +13,84 @@ html {
   box-sizing: inherit;
 }
 
-.borde{
-  background-color: var(--light-green);
-  height: 2em;
+.header {
+  width: 100%;
+  background-color: #181818;
+}
+.header nav {
+  padding: 1em 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .header nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.header nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 2em;
+  margin-bottom: 1em;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
-.header {
-  height: 40em;
+.header nav a:last-of-type {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .header nav a {
+    margin-bottom: 0;
+  }
+}
+
+.hero {
+  height: 35em;
   background-image: url(../img/fondo.png);
   background-size: 100%;
   background-repeat: no-repeat;
   padding: 1em;
   position: relative;
   display: flex;
-  align-items: flex-start;
-  
-} 
-.header-content {
+  align-items: center;
+}
+.hero-content {
   font-size: 2em;
   position: relative;
   z-index: 1;
   flex: 1;
   color: var(--white);
-  text-align: start;
-  font-family: 'EB Garamond' ;
+  text-align: center;
+  font-family: "EB Garamond";
 }
-.header-content a {
+.hero-content a {
   font-size: 1em;
   color: var(--primary);
   text-decoration: none;
-  font-family: 'spartan';
+  font-family: "spartan";
 }
-.header-content nav{
+.hero-content nav {
   position: relative;
   max-width: 900px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  
 }
-
-@media (max-width: 1000px) {
-  .header-content nav{
-  background-color: rgba(0, 66, 128, 0.719);
-  }
-}
-
-@media (max-width: 800px) {
-  .header-content a{
-  font-size: 0.7em;
-  }
-}
-
-@media (max-width: 600px) {
-  .header-content a{
-  font-size: 0.6em;
-  }
-}
-@media (max-width: 1100px) {
-  .header{
-      height: 35em;
-  }
-}
-
-@media (max-width: 1000px) {
-  .header{
-      height: 30em;
-  }
-}
-@media (max-width: 950px) {
-  .header{
-      height: 27.5em;
-  }
-} 
-@media (max-width: 900px) {
-  .header{
-      height: 25em;
-  }
-}
-@media (max-width: 850px) {
-  .header{
-      height: 22.5em;
-  }
-}
-@media (max-width: 800px) {
-  .header{
-      height: 20em;
-  }
-}
-@media (max-width: 700px) {
-  .header{
-      height: 15em;
-  }
-}
-
-@media (max-width: 600px) {
-  .header{
-      height: 13em;
-  }
+.button {
+  background-color: var(--dark-green);
+  padding: 1em 3em;
+  border-radius: 0.3em;
+  font-size: 1.2em;
+  font-weight: 700;
+  display: inline-block;
+  color: var(--white);
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
 }
 
 .ElLaudato {
@@ -122,341 +102,310 @@ html {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
 }
 
 .ElLaudato-content {
-  position: relative;
-  z-index: 1;
-  flex: 1;
+  width: 65% ;
+  position: relative; 
   padding-bottom: 2em;
-  color: var(--light-green);
+  color: var(--dark-green);
+  padding: 2em;
+  font-size: 2.5em;
+  font-family: "spartan";
   text-align: center;
 }
 
-.button {
-  background-color: var(--dark-green);
-  padding: 1em 3em;
-  border-radius: 0.3em;
-  font-size: 1.2em;
-  font-weight: 700;
-  display: inline-block;
-  color: var(--white);
-  text-decoration: none;
-  text-transform: uppercase;
-  
-  border: none;
+#parent {
+  display: flex;
+}
+#narrow {
+  width: 40%;
+ 
+}
+#wide {
+  flex: 1;
+  /* Grow to rest of container */
+}
+
+
+/*
+PURE RESPONSIVE CSS3 SLIDESHOW GALLERY by Roko C. buljan
+http://stackoverflow.com/a/34696029/383904
+*/
+
+.CSSgal {
+	position: relative;
+	overflow: hidden;
+	height: 100%; /* Or set a fixed height */
+}
+
+/* SLIDER */
+
+.CSSgal .slider {
+	height: 100%;
+	white-space: nowrap;
+	font-size: 0;
+	transition: 0.8s;
+}
+
+/* SLIDES */
+
+.CSSgal .slider > * {
+	font-size: 1rem;
+	display: inline-block;
+	white-space: normal;
+	vertical-align: top;
+	height: 50%;
+	width: 100%;
+	background: none 50% no-repeat;
+	background-size: cover;
+}
+
+/* PREV/NEXT, CONTAINERS & ANCHORS */
+
+.CSSgal .prevNext {
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	width: 100%;
+	height: 0;
+}
+
+.CSSgal .prevNext > div+div {
+	visibility: hidden; /* Hide all but first P/N container */
+}
+
+.CSSgal .prevNext a {
+	background: #fff;
+	position: absolute;
+	width:       60px;
+	height:      60px;
+	line-height: 60px; /* If you want to place numbers */
+	text-align: center;
+	opacity: 0.7;
+	-webkit-transition: 0.3s;
+					transition: 0.3s;
+	-webkit-transform: translateY(-50%);
+					transform: translateY(-50%);
+	left: 0;
+}
+.CSSgal .prevNext a:hover {
+	opacity: 1;
+}
+.CSSgal .prevNext a+a {
+	left: auto;
+	right: 0;
+}
+
+/* NAVIGATION */
+
+.CSSgal .bullets {
+	position: absolute;
+	z-index: 2;
+	bottom: 0;
+	padding: 10px 0;
+	width: 100%;
+	text-align: center;
+}
+.CSSgal .bullets > a {
+	display: inline-block;
+	width:       30px;
+	height:      30px;
+	line-height: 30px;
+	text-decoration: none;
+	text-align: center;
+	background: rgba(255, 255, 255, 1);
+	-webkit-transition: 0.3s;
+					transition: 0.3s;
+}
+.CSSgal .bullets > a+a {
+	background: rgba(255, 255, 255, 0.5); /* Dim all but first */
+}
+.CSSgal .bullets > a:hover {
+	background: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* NAVIGATION BUTTONS */
+/* ALL: */
+.CSSgal >s:target ~ .bullets >* {      background: rgba(255, 255, 255, 0.5);}
+/* ACTIVE */
+#s1:target ~ .bullets >*:nth-child(1) {background: rgba(255, 255, 255,   1);}
+#s2:target ~ .bullets >*:nth-child(2) {background: rgba(255, 255, 255,   1);}
+#s3:target ~ .bullets >*:nth-child(3) {background: rgba(255, 255, 255,   1);}
+#s4:target ~ .bullets >*:nth-child(4) {background: rgba(255, 255, 255,   1);}
+/* More slides? Add here more rules */
+
+/* PREV/NEXT CONTAINERS VISIBILITY */
+/* ALL: */
+.CSSgal >s:target ~ .prevNext >* {      visibility: hidden;}
+/* ACTIVE: */
+#s1:target ~ .prevNext >*:nth-child(1) {visibility: visible;}
+#s2:target ~ .prevNext >*:nth-child(2) {visibility: visible;}
+#s3:target ~ .prevNext >*:nth-child(3) {visibility: visible;}
+#s4:target ~ .prevNext >*:nth-child(4) {visibility: visible;}
+/* More slides? Add here more rules */
+
+/* SLIDER ANIMATION POSITIONS */
+
+#s1:target ~ .slider {transform: translateX(   0%); -webkit-transform: translateX(   0%);}
+#s2:target ~ .slider {transform: translateX(-100%); -webkit-transform: translateX(-100%);}
+#s3:target ~ .slider {transform: translateX(-200%); -webkit-transform: translateX(-200%);}
+#s4:target ~ .slider {transform: translateX(-300%); -webkit-transform: translateX(-300%);}
+/* More slides? Add here more rules */
+
+
+/* YOU'RE THE DESIGNER! 
+   ____________________
+   All above was mainly to get it working :)
+   CSSgal CUSTOM STYLES / OVERRIDES HERE: */
+
+.CSSgal{
+	color: #fff;	
+	text-align: center;
+}
+.CSSgal .slider h2 {
+	margin-top: 40vh;
+	font-weight: 200;
+	letter-spacing: -0.06em;
+	word-spacing: 0.2em;
+	font-size: 3em;
+}
+.CSSgal a {
+	border-radius: 50%;
+	margin: 0 3px;
+	color: rgba(0,0,0,0.8);
+	text-decoration: none;
+}
+
+
+
+@media (max-width: 1100px) {
+  .hero {
+    height: 35em;
+  }
+  .ElLaudato {
+    height: 19.5em;
+  }
+}
+@media (max-width: 1050px) {
+  .hero {
+    height: 32.5em;
+  }
+  .ElLaudato {
+    height: 19em;
+  }
+  .ElLaudato-content{
+    font-size: 2em;
+  }
 }
 
 @media (max-width: 1000px) {
-  .ElLaudato{
-      height: 19em;
+  .hero {
+    height: 30em;
+  }
+  .ElLaudato {
+    height: 19em;
+  }
+  .ElLaudato-content{
+    font-size: 2em;
+  }
+}
+@media (max-width: 950px) {
+  .hero {
+    height: 27.5em;
+  }
+  .ElLaudato {
+    height: 18.5em;
+  }
+  .ElLaudato-content{
+    font-size: 2em;
   }
 }
 @media (max-width: 900px) {
-  .ElLaudato{
-      height: 18em;
+  .hero {
+    height: 25em;
+  }
+  .ElLaudato {
+    height: 18em;
+  }
+  .ElLaudato-content{
+    font-size: 1.8em;
+  }
+}
+@media (max-width: 850px) {
+  .hero {
+    height: 22.5em;
   }
 }
 @media (max-width: 800px) {
-  .ElLaudato{
-      height: 17em;
+  .hero {
+    height: 20em;
+  }
+  .hero-content a {
+    font-size: 0.7em;
+  }
+  .ElLaudato {
+    height: 17em;
+  }
+  .ElLaudato-content{
+    font-size: 1.5em;
   }
 }
 
 @media (max-width: 700px) {
-  .ElLaudato{
-      height: 15em;
+  .hero {
+    height: 15em;
+  }
+  .ElLaudato {
+    height: 15em;
+  }
+  .hero-content h1 {
+    font-size: 1.5em;
+    font-weight: 800;
+    text-shadow: 1px 1px 1px rgba(43, 42, 42, 0.699);
+  }
+  .ElLaudato-content{
+    font-size: 1.3em;
   }
 }
+
 
 @media (max-width: 600px) {
-  .ElLaudato{
-      height: 13em;
+  .hero {
+    height: 13em;
+  }
+  .hero-content a {
+    font-size: 0.6em;
+  }
+  .ElLaudato {
+    height: 13em;
+  }
+  .hero-content .button {
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    font-size: 0.8em;
+    font-weight: 700;
+  }
+  .ElLaudato-content{
+    font-size: 1em;
+    font-weight: 800;
   }
 }
-
-@media (max-width: 600px) {
-  .ElLaudato-content .button{
-      padding: 0.5em 2em;
-      border-radius: 0.3em;
-      font-size: 1em;
-      font-weight: 700;
+@media (max-width: 500px) {
+  .hero {
+    height: 11em;
   }
-}
-
-#slider {
-text-align: center;
-}
-h2 {
-margin: 40px 0 25px;
-border-bottom: 1px solid #bbb;
-padding: 0 0 10px;
-}
-p {
-margin: 20px 0 16px;
-}
-strong {
-font-weight: bold;
-}
-label,
-a {
-color: brown;
-cursor: pointer;
-text-decoration: none;
-font-style: italic;
-}
-label:hover,
-a:hover {
-color: #ddd !important;
-}
-* {
--moz-box-sizing: border-box;
--webkit-box-sizing: border-box;
-box-sizing: border-box;
-}
-label,
-#active,
-img {
--moz-user-select: none;
--webkit-user-select: none;
-}
-.catch {
-display: block;
-height: 0;
-overflow: hidden;
-}
-#slider {
-margin: 0 auto;
-}
-input {
-display: none;
-}
-#slide1:checked ~ #slides .inner {
-margin-left: 0;
-}
-#slide2:checked ~ #slides .inner {
-margin-left: -100%;
-}
-#slide3:checked ~ #slides .inner {
-margin-left: -200%;
-}
-#slide4:checked ~ #slides .inner {
-margin-left: -300%;
-}
-#slide5:checked ~ #slides .inner {
-margin-left: -400%;
-}
-#container {
-width: 100%;
-overflow: hidden;
-}
-article img {
-width: 100%;
-}
-#slides .inner {
-width: 500%;
-line-height: 0;
-}
-#slides article {
-width: 20%;
-float: left;
-}
-#commands {
-margin: -25% 0 0 0;
-width: 100%;
-height: 50px;
-}
-#commands label {
-display: none;
-width: 80px;
-height: 80px;
-opacity: 0.5;
-}
-#commands label:hover {
-opacity: 0.8;
-}
-#active {
-position: relative;
-z-index: 5;
-margin: 16% 0 0;
-text-align: center;
-}
-#active label {
--webkit-border-radius: 5px;
--moz-border-radius: 5px;
-border-radius: 5px;
-display: inline-block;
-width: 10px;
-height: 10px;
-background: #bbb;
-}
-#active label:hover {
-background: #333;
-border-color: #777 !important;
-}
-#slide1:checked ~ #commands label:nth-child(2),
-#slide2:checked ~ #commands label:nth-child(3),
-#slide3:checked ~ #commands label:nth-child(4),
-#slide4:checked ~ #commands label:nth-child(5),
-#slide5:checked ~ #commands label:nth-child(1) {
-background: url("https://0.s3.envato.com/files/84450220/img/next.png")
-no-repeat;
-float: right;
-margin: 0 12px 0 0;
-display: block;
-}
-#slide1:checked ~ #commands label:nth-child(5),
-#slide2:checked ~ #commands label:nth-child(1),
-#slide3:checked ~ #commands label:nth-child(2),
-#slide4:checked ~ #commands label:nth-child(3),
-#slide5:checked ~ #commands label:nth-child(4) {
-background: url("https://0.s3.envato.com/files/84450220/img/previous.png")
-no-repeat;
-float: left;
-margin: 0 0 0 -6px;
-display: block;
-}
-#slide1:checked ~ #active label:nth-child(1),
-#slide2:checked ~ #active label:nth-child(2),
-#slide3:checked ~ #active label:nth-child(3),
-#slide4:checked ~ #active label:nth-child(4),
-#slide5:checked ~ #active label:nth-child(5) {
-background: #000;
-opacity: 0.6;
-border-color: #fff !important;
-border: 2px solid #fff;
-}
-.caption {
-line-height: 20px;
-margin: 0 0 -150%;
-position: absolute;
-padding: 320px 12px;
-opacity: 0;
-color: #fff;
-text-transform: none;
-font-family: "Open Sans", Arial, Helvetica, sans-serif;
-text-align: left;
-font-size: 18px;
-}
-.caption h3 {
-display: inline-block;
-padding: 10px;
-background: #000;
-border-radius: 3px 3px 3px 3px;
--moz-border-radius: 3px 3px 3px 3px;
--webkit-border-radius: 3px 3px 3px 3px;
-opacity: 0.7;
-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
-}
-#slides {
-position: relative;
-padding: 2px;
--webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
--moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-}
-#slides .inner {
--webkit-transform: translateZ(0);
--webkit-transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
--moz-transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
--ms-transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
--o-transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
-transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
--webkit-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
--moz-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
--ms-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
--o-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
-}
-#slider {
--webkit-transform: translateZ(0);
--webkit-transition: all 0.5s ease-out;
--moz-transition: all 0.5s ease-out;
--o-transition: all 0.5s ease-out;
-transition: all 0.5s ease-out;
-}
-#commands label {
--webkit-transform: translateZ(0);
--webkit-transition: opacity 0.2s ease-out;
--moz-transition: opacity 0.2s ease-out;
--o-transition: opacity 0.2s ease-out;
-transition: opacity 0.2s ease-out;
-}
-#slide1:checked ~ #slides article:nth-child(1) .caption,
-#slide2:checked ~ #slides article:nth-child(2) .caption,
-#slide3:checked ~ #slides article:nth-child(3) .caption,
-#slide4:checked ~ #slides article:nth-child(4) .caption,
-#slide5:checked ~ #slides article:nth-child(5) .caption {
-opacity: 1;
--webkit-transition: all 1s ease-out 0.6s;
--moz-transition: all 1s ease-out 0.6s;
--o-transition: all 1s ease-out 0.6s;
-transition: all 1s ease-out 0.6s;
-}
-#commands,
-#commands label,
-#slides,
-#active,
-#active label {
--webkit-transform: translateZ(0);
--webkit-transition: all 0.5s ease-out;
--moz-transition: all 0.5s ease-out;
--o-transition: all 0.5s ease-out;
-transition: all 0.5s ease-out;
-}
-#slider {
-max-width: 100%px;
-}
-@media only screen and (max-width: 100%) {
-#slider #commands {
-margin: -25% 0 0 5%;
-width: 90%;
-height: 50px;
-}
-#slider #commands label {
--moz-transform: scale(0.9);
--webkit-transform: scale(0.9);
--o-transform: scale(0.9);
--ms-transform: scale(0.9);
-transform: scale(0.9);
-}
-#slider #slides .caption {
-padding: 2em;
-}
-#slider #slides {
-padding: 2px 0;
--webkit-border-radius: 0;
--moz-border-radius: 0;
-border-radius: 0;
-}
-#slider #active {
-margin: 15% 0 0;
-}
-}
-@media only screen and (max-width: 450px) {
-#slider #commands {
-margin: -28% 0 0 1%;
-width: 100%;
-height: 70px;
-}
-#slider #active {
-margin: 12% 0 0;
-}
-#slider #slides {
-padding: 2px 0;
--webkit-border-radius: 0;
--moz-border-radius: 0;
-border-radius: 0;
-}
-#slider #slides .caption {
-opacity: 0 !important;
-}
-#slider #commands label {
--moz-transform: scale(0.7);
--webkit-transform: scale(0.7);
--o-transform: scale(0.7);
--ms-transform: scale(0.7);
-transform: scale(0.7);
-}
+  .hero-content a {
+    font-size: 0.4em;
+  }
+  .ElLaudato {
+    height: 11em;
+  }
+  .hero-content .button {
+    padding: 0.3em 0.7em;
+    border-radius: 0.3em;
+    font-size: 0.6em;
+    font-weight: 500;
+  }
 }
