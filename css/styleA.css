@@ -47,7 +47,7 @@ html {
 @media (min-width: 768px) {
   .header {
     position: fixed;
-    z-index: 1;
+    z-index: 1 ;
   }
   .progress-container {
     width: 100%;
