@@ -21,13 +21,16 @@
   ></script>
   <body>
     <div class="header">
-      <nav>
+      <nav class="">
         <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
         <a href="#">Inicio</a>
         <a href="#">El Laudato Si'</a>
         <a href="#">Interpretaciones</a>
         <a href="#">Todo</a>
       </nav>
+      <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+      </div>
     </div>
     <!-- <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span> -->
     <div class="hero">
@@ -122,5 +125,20 @@
         </form>
       </div>
     </footer>
+    <script>
+      //Cuando el usuario scrolle la pagina, excutar myfuntion()
+      window.onscroll = function() {
+        myFunction();
+      };
+      function myFunction() {
+        var winScroll =
+          document.body.scrollTop || document.documentElement.scrollTop;
+        var height =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+      }
+    </script>
   </body>
 </html>
