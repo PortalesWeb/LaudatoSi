@@ -1,0 +1,102 @@
+html {
+  box-sizing: border-box;
+  min-height: 100%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.header {
+  width: 100%;
+  background-color: #181818;
+}
+.header nav {
+  padding: 1em 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .header nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.header nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 2em;
+  margin-bottom: 1em;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.header nav a:last-of-type {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .header nav a {
+    margin-bottom: 0;
+  }
+}
+
+.imgTop {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  padding: 1em;
+}
+
+.tituloImagen{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 0 1em 0;
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+hr{
+  width: 93%;
+  background-color: black;
+}
+
+.tiuloH1{
+  width: 100%;
+}
+.titulo{
+  padding-bottom: 2em;
+}
+h1{
+  font-family: 'Noto Serif JP', serif;
+  font-size: 3em;
+  text-align: center;
+ padding: 1em 1em 0 1em ;
+}
+h3{
+  font-family: 'Noto Serif JP', serif;
+  text-align: center;
+  padding: 0 1em 0 1em ;
+}
+.parrafo{
+  text-align: justify;
+  padding: 1em 2.5em 0 2.5em ;
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#parent {
+  display: flex;
+}
+#narrow {
+  width: 40%;
+ 
+}
+#wide {
+  flex: 1;
+  /* Grow to rest of container */
+}
