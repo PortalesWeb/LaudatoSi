@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/styleA.css" />
+  </head>
+  <body>
+    <div class="header">
+      <nav>
+        <a href="../index.html">Inicio</a>
+        <a href="#">El Laudato Si'</a>
+        <a href="#">Interpretaciones</a>
+        <a href="#">Todo</a>
+      </nav>
+      <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+      </div>
+    </div>
+
+    <div class="bgimg-1">
+      <div class="caption">
+        <span class="border">ARTÍCULOS SOBRE EL LAUDATO SI'</span>
+      </div>
+    </div>
+
+    <div
+      style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;"
+    >
+      <h3 style="text-align:center;">Artículo 1</h3>
+      <p>
+        Articulo 1
+      </p>
+    </div>
+
+    <div class="bgimg-2">
+      <div class="caption">
+        <span
+          class="border"
+          style="background-color:transparent;font-size:25px;color: #f7f7f7;"
+          >"Dos cosas que me llaman la atención: la inteligencia de las bestias
+          y la bestialidad de los hombres"</span
+        >
+      </div>
+    </div>
+
+    <div style="position:relative;">
+      <div
+        style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;"
+      >
+        <p></p>
+      </div>
+    </div>
+    <div
+      style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;"
+    >
+      <h3 style="text-align:center;">Artículo 2</h3>
+      <p>
+        Articulo 2
+      </p>
+    </div>
+
+    <div class="bgimg-3">
+      <div class="caption">
+        <span
+          class="border"
+          style="background-color:transparent;font-size:25px;color: #f7f7f7;"
+          >"La tierra no es una herencia de nuestros padres, sino un préstamo de
+          nuestros hijos"</span
+        >
+      </div>
+    </div>
+
+    <div style="position:relative;margin-bottom: 0.5em;">
+      <div
+        style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;"
+      >
+        <p>
+          Notas: Página realizada por nuestro equipo, para el proyecto segundo parcial de Portales Web conformado por <br />Camila
+          Sampson <br />Danny Joaquin <br />Rolando Mejía <br />Rudy Rosa
+        </p>
+      </div>
+    </div>
+
+    <!-- <div class="bgimg-1">
+      <div class="caption">
+        <span class="border"></span>
+      </div>
+    </div> -->
+    <hr class="solid" />
+    <div class="card border ">
+      <img
+        src="/img/Rolo.JPG"
+        alt="Miembro del equipo"
+        style="width:300px;height:300px;"
+      />
+      <div class="containercard">
+        <h4><b>Rolando Antonio Mejia</b></h4>
+        <p>Programador, diseñador y estudiante.</p>
+      </div>
+    </div>
+
+    <script>
+      //Cuando el usuario scrolle la pagina, excutar myfuntion()
+      window.onscroll = function() {
+        myFunction();
+      };
+      function myFunction() {
+        var winScroll =
+          document.body.scrollTop || document.documentElement.scrollTop;
+        var height =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+      }
+    </script>
+  </body>
+</html>
