@@ -72,18 +72,18 @@ html {
   background-size: cover;
 }
 .bgimg-1 {
-  background-image: url(../img/fondo.png);
+  background-image: url(../img/wood.jpg);
   min-height: 100%;
   
 }
 
 .bgimg-2 {
-  background-image: url(../img/landspace.png);
+  background-image: url(../img/woman_nature.jpg);
   min-height: 400px;
 }
 
 .bgimg-3 {
-  background-image: url(../img/bosque.jpg);
+  background-image: url(../img/turtle.jpg);
   min-height: 400px;
 }
 
