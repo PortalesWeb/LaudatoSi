@@ -222,18 +222,17 @@ html {
 }
 
 .CSSgal .bullets > a + a {
-  background: rgba(255, 255, 255, 0.5); /* Dim all but first */
+  background: rgba(255, 255, 255, 0.5); 
 }
 .CSSgal .bullets > a:hover {
   background: rgba(255, 255, 255, 0.7) !important;
 }
 
-/* NAVIGATION BUTTONS */
-/* ALL: */
+
 .CSSgal > s:target ~ .bullets > * {
   background: rgba(255, 255, 255, 0.5);
 }
-/* ACTIVE */
+
 #s1:target ~ .bullets > *:nth-child(1) {
   background: rgba(255, 255, 255, 1);
 }
@@ -246,14 +245,11 @@ html {
 #s4:target ~ .bullets > *:nth-child(4) {
   background: rgba(255, 255, 255, 1);
 }
-/* More slides? Add here more rules */
 
-/* PREV/NEXT CONTAINERS VISIBILITY */
-/* ALL: */
 .CSSgal > s:target ~ .prevNext > * {
   visibility: hidden;
 }
-/* ACTIVE: */
+
 #s1:target ~ .prevNext > *:nth-child(1) {
   visibility: visible;
 }
@@ -266,9 +262,6 @@ html {
 #s4:target ~ .prevNext > *:nth-child(4) {
   visibility: visible;
 }
-/* More slides? Add here more rules */
-
-/* SLIDER ANIMATION POSITIONS */
 
 #s1:target ~ .slider {
   transform: translateX(0%);
@@ -286,12 +279,6 @@ html {
   transform: translateX(-300%);
   -webkit-transform: translateX(-300%);
 }
-/* More slides? Add here more rules */
-
-/* YOU'RE THE DESIGNER! 
-   ____________________
-   All above was mainly to get it working :)
-   CSSgal CUSTOM STYLES / OVERRIDES HERE: */
 
 .CSSgal {
   color: #fff;
@@ -442,7 +429,7 @@ html {
     font-weight: 500;
   }
 }
-/* Footer */
+
 .footer-distributed {
   background: #444;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
@@ -465,13 +452,11 @@ section {
   text-decoration: underline;
 }
 
-/* Footer left */
 
 .footer-distributed .footer-left {
   float: left;
 }
 
-/* The company logo */
 
 .footer-distributed h3 {
   color: #ffffff;
@@ -483,7 +468,6 @@ section {
   color: #5383d3;
 }
 
-/* Footer links */
 
 .footer-distributed .footer-links {
   color: #ffffff;
@@ -505,7 +489,6 @@ section {
   margin: 0;
 }
 
-/* Footer social icons */
 
 .footer-distributed .footer-icons {
   margin-top: 40px;
@@ -528,8 +511,6 @@ section {
   margin-bottom: 5px;
 }
 
-/* Footer Right */
-
 .footer-distributed .footer-right {
   float: right;
 }
@@ -540,8 +521,6 @@ section {
   margin: 15px 42px 0 0;
   color: #ffffff;
 }
-
-/* The contact form */
 
 .footer-distributed form {
   display: inline-block;
@@ -597,8 +576,6 @@ section {
   float: right;
 }
 
-/* If you don't want the footer to be responsive, remove these media queries */
-
 @media (max-width: 1000px) {
   .footer-distributed {
     font: bold 14px sans-serif;
@@ -646,8 +623,6 @@ section {
     float: none;
   }
 }
-/* progressBar */
-/* ProgressBar */
 @media (min-width: 768px) {
   .header{
     position: fixed;
