@@ -667,11 +667,8 @@ section {
   opacity:0;
   content: attr(data-text);
   transition: 0.5s;
-
-  .init{
-
-  }
 }
+
 .textOverImage:hover:after{
  opacity:1; 
  top:0;
