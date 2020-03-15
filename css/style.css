@@ -72,6 +72,92 @@ html {
   color: var(--primary);
   text-decoration: none;
   font-family: "spartan";
+}:root {
+  --white: #ffffff;
+  --light-green: #1b5e20;
+  --dark-green: #003300;
+}
+html {
+  box-sizing: border-box;
+  min-height: 100%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.header {
+  width: 100%;
+  background-color: #181818;
+  position: sticky;
+}
+
+.header nav {
+  border: none;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .header nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.header nav a {
+  padding: 15px 32px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.header nav a:last-of-type {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .header nav a {
+    margin-bottom: 0;
+  }
+}
+.header nav a:hover {
+  background-color: #fcf8e8;
+  color: black;
+}
+
+.hero {
+  height: 35em;
+  background-image: url(../img/fondo.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding: 1em;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .hero {
+    background-attachment: fixed;
+  }
+}
+.hero-content {
+  font-size: 2em;
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  color: var(--white);
+  text-align: center;
+  font-family: "EB Garamond";
+}
+.hero-content a {
+  font-size: 1em;
+  color: #5383d3;
+  text-decoration: none;
+  font-family: "spartan";
 }
 .hero-content nav {
   position: relative;
@@ -81,11 +167,451 @@ html {
   justify-content: space-between;
 }
 .button {
-  background-color: var(--dark-green);
+  background-color: #5383d3;
   padding: 1em 3em;
   border-radius: 0.3em;
   font-size: 1.2em;
   font-weight: 700;
+  display: inline-block;
+  color: var(--white);
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.button:hover {
+  box-shadow: 0 30px 20px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  z-index: 3;
+}
+
+.ElLaudato {
+  height: 30em;
+  background-image: url(../img/Laudato.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-bottom: 2em;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.ElLaudato-content {
+  width: 65%;
+  position: relative;
+  padding-bottom: 2em;
+  color: var(--dark-green);
+  padding: 2em;
+  font-size: 2.5em;
+  font-family: "spartan";
+  text-align: center;
+}
+
+#parent {
+  display: flex;
+}
+#narrow {
+  width: 40%;
+}
+#wide {
+  flex: 1;
+ }
+
+@media (max-width: 1100px) {
+  .hero {
+    height: 35em;
+  }
+  .ElLaudato {
+    height: 19.5em;
+  }
+}
+@media (max-width: 1050px) {
+  .hero {
+    height: 32.5em;
+  }
+  .ElLaudato {
+    height: 19em;
+  }
+  .ElLaudato-content {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 1000px) {
+  .hero {
+    height: 30em;
+  }
+  .ElLaudato {
+    height: 19em;
+  }
+  .ElLaudato-content {
+    font-size: 2em;
+  }
+}
+@media (max-width: 950px) {
+  .hero {
+    height: 27.5em;
+  }
+  .ElLaudato {
+    height: 18.5em;
+  }
+  .ElLaudato-content {
+    font-size: 2em;
+  }
+}
+@media (max-width: 900px) {
+  .hero {
+    height: 25em;
+  }
+  .ElLaudato {
+    height: 18em;
+  }
+  .ElLaudato-content {
+    font-size: 1.8em;
+  }
+}
+@media (max-width: 850px) {
+  .hero {
+    height: 22.5em;
+  }
+}
+@media (max-width: 800px) {
+  .hero {
+    height: 20em;
+  }
+  .hero-content a {
+    font-size: 0.7em;
+  }
+  .ElLaudato {
+    height: 17em;
+  }
+  .ElLaudato-content {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    height: 15em;
+  }
+  .ElLaudato {
+    height: 15em;
+  }
+  .hero-content h1 {
+    font-size: 1.5em;
+    font-weight: 800;
+    text-shadow: 1px 1px 1px rgba(43, 42, 42, 0.699);
+  }
+  .ElLaudato-content {
+    font-size: 1.3em;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    height: 13em;
+  }
+  .hero-content a {
+    font-size: 0.6em;
+  }
+  .ElLaudato {
+    height: 13em;
+  }
+  .hero-content .button {
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    font-size: 0.8em;
+    font-weight: 700;
+  }
+  .ElLaudato-content {
+    font-size: 1em;
+    font-weight: 800;
+  }
+}
+@media (max-width: 500px) {
+  .hero {
+    height: 11em;
+  }
+  .hero-content a {
+    font-size: 0.4em;
+  }
+  .ElLaudato {
+    height: 11em;
+  }
+  .hero-content .button {
+    padding: 0.3em 0.7em;
+    border-radius: 0.3em;
+    font-size: 0.6em;
+    font-weight: 500;
+  }
+}
+
+.footer-distributed {
+  background: #444;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  font: bold 16px sans-serif;
+  text-align: left;
+  padding: 40px 60px 20px;
+  overflow: hidden;
+}
+
+section {
+  width: 100%;
+  display: inline-block;
+  background: #ccc;
+  height: 60vh;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+
+.footer-distributed .footer-left {
+  float: left;
+}
+
+
+.footer-distributed h3 {
+  color: #ffffff;
+  font: normal 36px "Roboto", cursive;
+  margin: 0 0 10px;
+}
+
+.footer-distributed h3 span {
+  color: #5383d3;
+}
+
+
+.footer-distributed .footer-links {
+  color: #ffffff;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+  color: #8f9296;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+
+.footer-distributed .footer-icons {
+  margin-top: 40px;
+}
+
+.footer-distributed .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #33383b;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+.footer-distributed .footer-right {
+  float: right;
+}
+
+.footer-distributed .footer-right p {
+  display: inline-block;
+  vertical-align: top;
+  margin: 15px 42px 0 0;
+  color: #ffffff;
+}
+
+.footer-distributed form {
+  display: inline-block;
+}
+
+.footer-distributed form input,
+.footer-distributed form textarea {
+  display: block;
+  border-radius: 3px;
+  box-sizing: border-box;
+  background-color: #1f2022;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  border: none;
+  resize: none;
+  font: inherit;
+  font-size: 14px;
+  font-weight: normal;
+  color: #d1d2d2;
+  width: 400px;
+  padding: 5px;
+}
+
+.footer-distributed ::-webkit-input-placeholder {
+  color: #5c666b;
+}
+
+.footer-distributed ::-moz-placeholder {
+  color: #5c666b;
+  opacity: 1;
+}
+
+.footer-distributed :-ms-input-placeholder {
+  color: #5c666b;
+}
+
+.footer-distributed form input {
+  height: 55px;
+  margin-bottom: 15px;
+}
+
+.footer-distributed form textarea {
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.footer-distributed form button {
+  border-radius: 3px;
+  background-color: #33383b;
+  color: #ffffff;
+  border: 0;
+  padding: 15px 50px;
+  font-weight: bold;
+  float: right;
+}
+
+@media (max-width: 1000px) {
+  .footer-distributed {
+    font: bold 14px sans-serif;
+  }
+
+  .footer-distributed .footer-company-name {
+    font-size: 12px;
+  }
+
+  .footer-distributed form input,
+  .footer-distributed form textarea {
+    width: 250px;
+  }
+
+  .footer-distributed form button {
+    padding: 10px 35px;
+  }
+}
+
+@media (max-width: 800px) {
+  .footer-distributed {
+    padding: 30px;
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-right {
+    float: none;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .footer-distributed .footer-left {
+    margin-bottom: 40px;
+  }
+
+  .footer-distributed form {
+    margin-top: 30px;
+  }
+
+  .footer-distributed form {
+    display: block;
+  }
+
+  .footer-distributed form button {
+    float: none;
+  }
+}
+@media (min-width: 768px) {
+  .header{
+    position: fixed;
+    z-index: 5;
+  }
+  .progress-container {
+    width: 100%;
+    height: 12px;
+    background: #ccc;
+  }
+  
+  .progress-bar {
+    height: 12px;
+    background: #7368F5;
+  }
+}
+
+.textOverImage{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  float: left;
+  margin: 4px;
+  background-size: 100%; 
+  background-position: center;
+  transition: 0.5s;     
+}
+.textOverImage:hover{
+  background-size: 110%;
+}
+.textOverImage::after{
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  white-space: pre-wrap;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.3);
+  color:#fff;
+  padding:0 8px;
+  opacity:0;
+  content: attr(data-text);
+  transition: 0.5s;
+}
+
+.textOverImage:hover:after{
+ opacity:1; 
+ top:0;
+ padding:8px;
+}
+.textOverImage:first-line{
+  color:#fff;
+  font-weight:bold;
+  font-size:1.5em;
+}
+
+.hero-content nav {
+  position: relative;
+  max-width: 900px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.button {
+  background-color: var(--dark-green);
+  padding: 0.5em 2em;
+  border-radius: 0.3em;
+  font-size: 1em;
+  font-weight: 600;
   display: inline-block;
   color: var(--white);
   text-decoration: none;
@@ -279,133 +805,3 @@ http://stackoverflow.com/a/34696029/383904
 }
 
 
-
-@media (max-width: 1100px) {
-  .hero {
-    height: 35em;
-  }
-  .ElLaudato {
-    height: 19.5em;
-  }
-}
-@media (max-width: 1050px) {
-  .hero {
-    height: 32.5em;
-  }
-  .ElLaudato {
-    height: 19em;
-  }
-  .ElLaudato-content{
-    font-size: 2em;
-  }
-}
-
-@media (max-width: 1000px) {
-  .hero {
-    height: 30em;
-  }
-  .ElLaudato {
-    height: 19em;
-  }
-  .ElLaudato-content{
-    font-size: 2em;
-  }
-}
-@media (max-width: 950px) {
-  .hero {
-    height: 27.5em;
-  }
-  .ElLaudato {
-    height: 18.5em;
-  }
-  .ElLaudato-content{
-    font-size: 2em;
-  }
-}
-@media (max-width: 900px) {
-  .hero {
-    height: 25em;
-  }
-  .ElLaudato {
-    height: 18em;
-  }
-  .ElLaudato-content{
-    font-size: 1.8em;
-  }
-}
-@media (max-width: 850px) {
-  .hero {
-    height: 22.5em;
-  }
-}
-@media (max-width: 800px) {
-  .hero {
-    height: 20em;
-  }
-  .hero-content a {
-    font-size: 0.7em;
-  }
-  .ElLaudato {
-    height: 17em;
-  }
-  .ElLaudato-content{
-    font-size: 1.5em;
-  }
-}
-
-@media (max-width: 700px) {
-  .hero {
-    height: 15em;
-  }
-  .ElLaudato {
-    height: 15em;
-  }
-  .hero-content h1 {
-    font-size: 1.5em;
-    font-weight: 800;
-    text-shadow: 1px 1px 1px rgba(43, 42, 42, 0.699);
-  }
-  .ElLaudato-content{
-    font-size: 1.3em;
-  }
-}
-
-
-@media (max-width: 600px) {
-  .hero {
-    height: 13em;
-  }
-  .hero-content a {
-    font-size: 0.6em;
-  }
-  .ElLaudato {
-    height: 13em;
-  }
-  .hero-content .button {
-    padding: 0.5em 1em;
-    border-radius: 0.3em;
-    font-size: 0.8em;
-    font-weight: 700;
-  }
-  .ElLaudato-content{
-    font-size: 1em;
-    font-weight: 800;
-  }
-}
-@media (max-width: 500px) {
-  .hero {
-    height: 11em;
-  }
-  .hero-content a {
-    font-size: 0.4em;
-  }
-  .ElLaudato {
-    height: 11em;
-  }
-  .hero-content .button {
-    padding: 0.3em 0.7em;
-    border-radius: 0.3em;
-    font-size: 0.6em;
-    font-weight: 500;
-  }
-}
