@@ -296,7 +296,7 @@ html {
   margin: 0 3px;
   color: rgba(0, 0, 0, 0.8);
   text-decoration: none;
-}
+  }
 .CSSgal a:hover {
   transform: rotate(360deg);
 }
@@ -667,6 +667,10 @@ section {
   opacity:0;
   content: attr(data-text);
   transition: 0.5s;
+
+  .init{
+
+  }
 }
 .textOverImage:hover:after{
  opacity:1; 
